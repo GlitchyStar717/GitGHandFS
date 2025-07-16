@@ -1,0 +1,40 @@
+{
+  "name": "login-app-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for login application",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 3000 -c-1",
+    "dev": "live-server --port=3000 --host=localhost",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o dist/style.min.css style.css",
+    "minify:js": "terser script.js -o dist/script.min.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint script.js",
+    "lint:fix": "eslint script.js --fix",
+    "validate:html": "html-validate index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.2",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "html-validate": "^8.2.0"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "frontend",
+    "authentication"
+  ],
+  "author": "GlitchyStar",
+  "license": "MIT"
+}
